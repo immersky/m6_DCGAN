@@ -36,7 +36,7 @@ DCGAN在原始GAN的生成器和鉴别器加入了CNN的结构，但舍弃了CNN
 
 反卷积的叫法并不好，DCGAN论文中称其为一个错误，信号处理中的去卷积是卷积运算的逆运算，而这里则不是正向卷积的完全逆过程，用一句话来解释：
 
-微步幅卷积是一种特殊的正向卷积，先按照一定的比例通过补 ![[公式]](https://www.zhihu.com/equation?tex=0) 来扩大输入图像的尺寸，接着旋转卷积核，再进行正向卷积。
+微步幅卷积是一种特殊的正向卷积，先按照一定的比例通过补0 来扩大输入图像的尺寸，接着旋转卷积核，再进行正向卷积。
 
 过程如下
 
@@ -44,13 +44,15 @@ DCGAN在原始GAN的生成器和鉴别器加入了CNN的结构，但舍弃了CNN
 
 如下图的例子
 
-![conv1](D:\Study\homeworker\大二\深度学习学习\m6_DCGAN\conv1.png)
+![conv1](https://user-images.githubusercontent.com/74494790/171611423-ad369814-7547-4ec8-a6fc-f2bc3e4e028a.png)
+
 
 此时，若用卷积核对应稀疏矩阵的转置$C^T(16*4)$乘以输出的平展4*1矩阵，得到的结果和输入时的尺寸相同，如下图
 
 
+![conv2](https://user-images.githubusercontent.com/74494790/171611465-96c75697-f7d3-4bba-af78-611b22c3a41c.jpg)
 
-![conv2](D:\Study\homeworker\大二\深度学习学习\m6_DCGAN\conv2.jpg)
+
 
 缺陷：棋盘效应,参考:https://distill.pub/2016/deconv-checkerboard/
 
@@ -58,9 +60,9 @@ DCGAN在原始GAN的生成器和鉴别器加入了CNN的结构，但舍弃了CNN
 
 放两个直观的图，源自上面的网址
 
-![notgood1](D:\Study\homeworker\大二\深度学习学习\m6_DCGAN\notgood1.png)
+![notgood1](https://user-images.githubusercontent.com/74494790/171611483-8d122440-853b-410b-be8c-5dbbe313095d.png)
+![notgood2](https://user-images.githubusercontent.com/74494790/171611485-ae8789b0-f258-441f-98bd-fc2a4a841396.png)
 
-![notgood2](D:\Study\homeworker\大二\深度学习学习\m6_DCGAN\notgood2.png)
 
 
 
@@ -82,7 +84,8 @@ DCGAN在原始GAN的生成器和鉴别器加入了CNN的结构，但舍弃了CNN
 
 论文中给出了一张生成器的结构图
 
-![ggraph](D:\Study\homeworker\大二\深度学习学习\m6_DCGAN\ggraph.png)
+![ggraph](https://user-images.githubusercontent.com/74494790/171611501-04e0c826-6110-45b5-919b-fee92a8a3744.png)
+
 
 # pytorch官方教程描述的一些代码实现细节
 
