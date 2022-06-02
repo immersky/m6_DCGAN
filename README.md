@@ -50,7 +50,8 @@ DCGAN在原始GAN的生成器和鉴别器加入了CNN的结构，但舍弃了CNN
 此时，若用卷积核对应稀疏矩阵的转置$C^T(16*4)$乘以输出的平展4*1矩阵，得到的结果和输入时的尺寸相同，如下图
 
 
-![conv2](https://user-images.githubusercontent.com/74494790/171611465-96c75697-f7d3-4bba-af78-611b22c3a41c.jpg)
+![cov2](https://user-images.githubusercontent.com/74494790/171611806-cfa42147-fd4e-4d25-aa91-2a2156b60f87.png)
+
 
 
 
